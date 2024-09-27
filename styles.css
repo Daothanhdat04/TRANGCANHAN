@@ -1,0 +1,139 @@
+/* Định nghĩa các thuộc tính toàn cục cho trang web */
+:root {
+    /* Giao diện Mặc Định */
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg-color: rgb(189, 189, 189);
+    --header-text-color: #000;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Xác định kiểu chữ cho toàn bộ trang */
+    margin: 0; /* Loại bỏ khoảng cách mặc định xung quanh body */
+    padding: 0; /* Loại bỏ khoảng cách bên trong body */
+    box-sizing: border-box; /* Bao gồm padding và border vào chiều rộng và chiều cao của phần tử */
+    background-color: #f0f0f0; /* Màu nền nhạt để làm nổi bật các phần tử */
+}
+
+/* Định dạng phần header của trang web */
+/* Styles cho phần header */
+header {
+    background: rgb(189, 189, 189);
+    text-align: center;
+    box-shadow: 0 8px 10px rgb(127, 127, 127); /* Bóng đổ tinh tế */
+    height: 130px;
+    
+}
+
+header h1 {
+    font-size: 100px;
+    color:#000000;
+    text-shadow: -5px -5px 0px rgb(255, 255, 255); /* Hiệu ứng đổ bóng nhẹ */
+    letter-spacing: 10px; /* khoảng cách giữa cách chữ */
+    text-transform: uppercase; /* Chữ in hoa để tạo sự mạnh mẽ */
+    margin: 0;
+    font-family: "Moo Lah Lah", sans-serif;
+    font-weight: 400;
+    font-style: normal;/* font chữ được chuyển từ google form */
+}
+
+/* Thêm hiệu ứng khi người dùng di chuột vào tên */
+header h1:hover {
+    color: #f700ff; /* Màu sắc thay đổi khi hover */
+    transition: color 0.5s ease;
+}
+
+
+/* Định dạng phần nội dung chính của trang */
+main {
+    padding: 30px; /* Thêm khoảng cách xung quanh nội dung trong main */
+    display: flex; /* Sử dụng Flexbox để bố trí các phần tử con */
+    justify-content: center; /* Căn giữa các phần tử con theo chiều ngang */
+    flex-wrap: wrap; /* Cho phép các phần tử con xuống hàng nếu không còn chỗ */
+    gap: 20px; /* Khoảng cách giữa các box */
+}
+
+/* Định dạng cho các phần tử box trong main */
+.box {
+    border-radius: 8px; /* Bo góc cho các box để tạo các góc tròn */
+    padding: 20px; /* Thêm khoảng cách xung quanh nội dung bên trong box */
+    flex: 1; /* Cho phép các box mở rộng để chiếm không gian còn lại */
+    min-width: 150px; /* Đặt chiều rộng tối thiểu cho mỗi box */
+    max-width: 220px; /* Đặt chiều rộng tối đa cho mỗi box */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng rõ hơn cho các box để tạo hiệu ứng nổi bật */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho transform, box-shadow và background-color khi hover */
+    text-align: center; /* Căn giữa nội dung văn bản trong box */
+    text-decoration: none; /* Loại bỏ gạch chân của liên kết */
+    color: #fff; /* Màu chữ trắng để nổi bật trên nền tối của các box */
+    font-weight: bold; /* Chữ đậm hơn để dễ đọc hơn */
+    font-size: 16px; /* Kích thước chữ lớn hơn một chút để dễ đọc hơn */
+}
+
+/* Hiệu ứng khi hover vào các box */
+.box:hover {
+    transform: scale(1.05); /* Tăng kích thước của box lên 5% khi hover để tạo hiệu ứng phóng to */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng độ bóng của box khi hover để tạo hiệu ứng nổi bật hơn */
+}
+
+/* Định dạng phần footer của trang web */
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    position: relative; /* To create a stacking context */
+    z-index: 1; /* Layer it under the social boxes */
+}   
+footer {
+    background-color: #333; /* Màu nền tối cho footer */
+    color: #fff; /* Màu chữ trắng để nổi bật trên nền tối */
+    text-align: center; /* Căn giữa nội dung văn bản trong footer */
+    padding: 5px; /* Thêm khoảng cách xung quanh nội dung trong footer */
+    position: fixed; /* Đặt footer cố định ở dưới cùng của trang */
+    width: 100%; /* Đảm bảo footer chiếm toàn bộ chiều rộng của trang */
+    bottom: 0; /* Đặt footer ở dưới cùng của trang */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng nhẹ cho footer để tạo hiệu ứng nổi bật */
+}
+p{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.avatar{
+    padding: 50px;
+    text-align: center;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+    margin: 40px auto;
+    border-radius: 10%;
+    z-index: 1; /* Layer it under the social boxes */
+    object-fit:cover;
+}
+/* Các kiểu Responsive */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 70px;
+    }
+
+    .box {
+        min-width: 120px;
+        max-width: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 50px;
+    }
+
+    .box {
+        min-width: 100px;
+        max-width: 150px;
+    }
+
+    .avatar img {
+        width: 100px;
+    }
+}
